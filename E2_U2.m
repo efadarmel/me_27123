@@ -49,6 +49,7 @@ Qfs = sqrt(Ss^2 - Ps^2);   % Potencia reactiva de Fryze
 fps = Ps/Ss;               % Factor de potencia
 
 % --- Modelo de Budeanu en el alimentador ---
+% iBs = [is(N/4+1:end), is(1:N/4)];   % Corriente de Budeanu
 iBs = [is(3:8), is(1:2)];   % Corriente de Budeanu
 QBs = (1/N)*sum(vs.*iBs);           % Potencia reactiva Budeanu
 DBs = sqrt(Ss^2 - Ps^2 - QBs^2);    % Potencia de Distorsión de Budeanu
